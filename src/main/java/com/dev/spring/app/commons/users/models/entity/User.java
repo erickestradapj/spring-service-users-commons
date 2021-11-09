@@ -35,4 +35,6 @@ public class User {
     @JoinTable(schema = "db_users"
             , uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "roles_id"})}) // unique - row
     private List<Role> roles;
+
+    private Integer attempts;
 }
